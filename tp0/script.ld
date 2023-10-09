@@ -1,9 +1,9 @@
 /*
- * File: SIM.ld
+ * File: script.ld
  * Created Date: 2023-03-31 02:52:02 pm
  * Author: Mathieu Escouteloup
  * -----
- * Last Modified: 2023-08-22 03:20:47 pm
+ * Last Modified: 2023-10-09 03:49:12 pm
  * Modified By: Mathieu Escouteloup
  * -----
  * License: See LICENSE.md
@@ -32,9 +32,6 @@ SECTIONS
     KEEP(*start.o(.text*));
     *start.o(.rodata*);
     *start.o(.srodata*);
-    *init.o(.rodata*);
-    *init.o(.srodata*);
-    *init.o(.text*);
     . = ALIGN(32);    /* PADDING END SECTION */
   } > BOOT
 
@@ -48,7 +45,7 @@ SECTIONS
     . = ALIGN(32);    /* PADDING END SECTION */
     _etext = . ;
     _idata = . ;
-  } > iROM
+  } > BOOT
 
   /* Initialized data */
   .data : 
@@ -59,7 +56,7 @@ SECTIONS
     *(.sdata*);
     . = ALIGN(32);    /* PADDING END SECTION */
     _edata = . ;
-  } > iRAM AT > iROM
+  } > iRAM AT > BOOT
 
   /* Unitialized data */
   .bss (NOLOAD) :
