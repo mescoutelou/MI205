@@ -1,11 +1,11 @@
 [*]
 [*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
-[*] Mon Oct  9 14:30:58 2023
+[*] Tue Oct 10 10:17:07 2023
 [*]
-[dumpfile] "/home/escou64/Projects/test/MI205/tp0/vcd/main.vcd"
-[dumpfile_mtime] "Mon Oct  9 14:29:38 2023"
-[dumpfile_size] 1183381
-[savefile] "/home/escou64/Projects/test/MI205/tp0/cpu0.gtkw"
+[dumpfile] "/home/escou64/Projects/test/MI205/tp1/vcd/main.vcd"
+[dumpfile_mtime] "Tue Oct 10 10:08:45 2023"
+[dumpfile_size] 1396917
+[savefile] "/home/escou64/Projects/test/MI205/tp1/cpu0.gtkw"
 [timestart] 0
 [size] 1848 1016
 [pos] -1 -1
@@ -22,12 +22,11 @@
 [sst_vpaned_height] 289
 @28
 TOP.clock
+TOP.reset
 @24
 +{cycle} TOP.io_o_dbg_aubrac_0_hpc_cycle[63:0]
 @22
 +{PC} TOP.io_o_dbg_aubrac_0_last[31:0]
-@28
-TOP.reset
 @c00200
 -GPR
 @22
@@ -85,7 +84,7 @@ TOP.reset
 +{st      } TOP.io_o_dbg_aubrac_0_hpc_st[63:0]
 @1401200
 -HPC
-@c00200
+@c00201
 -I/Os
 @22
 +{GPIOA_eno } TOP.io_b_gpio_0_eno[31:0]
@@ -141,8 +140,12 @@ TOP.reset
 -GPIOB
 @28
 +{PIN0_LED0} (31)TOP.io_b_gpio_1_out[31:0]
++{PIN1_LED1} (30)TOP.io_b_gpio_1_out[31:0]
++{PIN2_LED2} (29)TOP.io_b_gpio_1_out[31:0]
++{PIN3_LED3} (28)TOP.io_b_gpio_1_out[31:0]
 @1401200
 -GPIOB
+@1401201
 -I/Os
 @c00200
 -Memory

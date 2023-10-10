@@ -8,6 +8,13 @@
 .globl _start
 _start:
   la sp, _stack
+
+_init:
+  li t0, ADDR_PLTF_GPIOB
+  li t1, 0xf7000000
+  sw t1, 0(t0)
+  sw zero, 4(t0)
+
   call main
 
 ## ******************************

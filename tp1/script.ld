@@ -3,7 +3,7 @@
  * Created Date: 2023-03-31 02:52:02 pm
  * Author: Mathieu Escouteloup
  * -----
- * Last Modified: 2023-10-09 03:49:12 pm
+ * Last Modified: 2023-10-10 07:41:56 am
  * Modified By: Mathieu Escouteloup
  * -----
  * License: See LICENSE.md
@@ -26,25 +26,16 @@ BOOT_PC     = 0x04000000;
 /* Section Definitions */
 SECTIONS
 {  
-  /* Boot ROM */
+  /* Code and constants */
   .boot BOOT_PC :
   {
     KEEP(*start.o(.text*));
     *start.o(.rodata*);
     *start.o(.srodata*);
-    . = ALIGN(32);    /* PADDING END SECTION */
-  } > BOOT
-
-  /* Code and constants */
-  .text :
-  {
-    _stext = . ;
     *(.rodata*);
     *(.srodata*);
     *(.text*);
     . = ALIGN(32);    /* PADDING END SECTION */
-    _etext = . ;
-    _idata = . ;
   } > BOOT
 
   /* Initialized data */
