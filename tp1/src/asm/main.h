@@ -1,9 +1,9 @@
 /*
- * File: cpu.h
+ * File: main.h
  * Created Date: 2023-02-26 09:08:32 pm
  * Author: Mathieu Escouteloup
  * -----
- * Last Modified: 2023-10-09 04:23:28 pm
+ * Last Modified: 2023-10-10 04:57:55 pm
  * Modified By: Mathieu Escouteloup
  * -----
  * License: See LICENSE.md
@@ -12,25 +12,3 @@
  * Description: 
  */
 
-#define ADDR_CORE_SCRATCH   0x10000400
-#define ADDR_CORE_SCRATCH0  0x10000400
-#define ADDR_CORE_SCRATCH1  0x10000404
-#define ADDR_CORE_SCRATCH2  0x10000408
-#define ADDR_CORE_SCRATCH3  0x1000040c
-#define ADDR_CORE_SCRATCH4  0x10000410
-#define ADDR_CORE_SCRATCH5  0x10000414
-#define ADDR_CORE_SCRATCH6  0x10000418
-#define ADDR_CORE_SCRATCH7  0x1000041c
-
-#define ADDR_PLTF_GPIOA     0x1c010400
-#define ADDR_PLTF_GPIOA_ENO 0x1c010400
-#define ADDR_PLTF_GPIOA_REG 0x1c010404
-#define ADDR_PLTF_GPIOA_SET 0x1c010408
-#define ADDR_PLTF_GPIOA_RST 0x1c01040c
-#define ADDR_PLTF_GPIOB     0x1c010480
-#define ADDR_PLTF_GPIOB_ENO 0x1c010480
-#define ADDR_PLTF_GPIOB_REG 0x1c010484
-#define ADDR_PLTF_GPIOB_SET 0x1c010488
-#define ADDR_PLTF_GPIOB_RST 0x1c01048c
-
-#define GPIOA_BIT_END     31

@@ -3,7 +3,7 @@
  * Created Date: 2023-03-31 02:52:02 pm
  * Author: Mathieu Escouteloup
  * -----
- * Last Modified: 2023-10-10 07:41:56 am
+ * Last Modified: 2023-10-10 05:54:04 pm
  * Modified By: Mathieu Escouteloup
  * -----
  * License: See LICENSE.md
@@ -21,13 +21,13 @@ MEMORY
 }
 
 STACK_SIZE  = 0x00003000;
-BOOT_PC     = 0x04000000;
+PC_BOOT     = 0x04000000;
 
 /* Section Definitions */
 SECTIONS
 {  
   /* Code and constants */
-  .boot BOOT_PC :
+  .boot PC_BOOT :
   {
     KEEP(*start.o(.text*));
     *start.o(.rodata*);

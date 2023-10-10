@@ -3,7 +3,7 @@
  * Created Date: 2023-10-09 03:34:09 pm
  * Author: Mathieu Escouteloup
  * -----
- * Last Modified: 2023-10-10 11:48:44 am
+ * Last Modified: 2023-10-10 06:59:43 pm
  * Modified By: Mathieu Escouteloup
  * -----
  * License: See LICENSE.md
@@ -23,14 +23,13 @@
 ## ------------------------------
 .globl main
 main:
+  # main save
   addi sp, sp, -4
   sw ra, 0(sp)
 
-#  call func_mul_asm
-  li a0, 4
-  li a1, 3
-  call func_mul_c
+  # main body
 
+  # main end
   lw ra, 0(sp)
   addi sp, sp, 4
   ret
