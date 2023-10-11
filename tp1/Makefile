@@ -1,3 +1,4 @@
+#TOOLCHAIN=riscv64-unknown-linux-gnu
 TOOLCHAIN=riscv32-unknown-elf
 ISA_EXT=
 OPT_LVL=1

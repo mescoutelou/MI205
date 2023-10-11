@@ -3,7 +3,7 @@
  * Created Date: 2023-10-10 07:29:56 am
  * Author: Mathieu Escouteloup
  * -----
- * Last Modified: 2023-10-10 11:43:57 am
+ * Last Modified: 2023-10-11 08:00:34 am
  * Modified By: Mathieu Escouteloup
  * -----
  * License: See LICENSE.md
@@ -15,8 +15,8 @@
 
 #include <stdint.h>
 
-void func_set_pin_c (uint32_t *p_gpio, uint8_t pin);
-void func_reset_pin_c (uint32_t *p_gpio, uint8_t pin);
-uint16_t func_mul_c (uint8_t a, uint8_t b);
-uint16_t func_mulop_c (uint8_t a, uint8_t b);
-uint16_t func_mulp2_c (uint8_t a, uint8_t b);
+void func_set_pin_c (int *p_gpio, char pin);
+void func_reset_pin_c (int *p_gpio, char pin);
+short func_mul_c (char a, char b);
+short func_mulop_c (char a, char b);
+short func_mulp2_c (char a, char b);
