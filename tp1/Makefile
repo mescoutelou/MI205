@@ -1,9 +1,8 @@
-#TOOLCHAIN=riscv64-unknown-linux-gnu
 TOOLCHAIN=riscv32-unknown-elf
 ISA_EXT=
 OPT_LVL=1
 CFLAGS = -march=rv32i${ISA_EXT} -mabi=ilp32
-CFLAGS += -O${OPT_LVL} -nostartfiles -nostdlib -fstrict-volatile-bitfields
+CFLAGS += -O${OPT_LVL} -nostartfiles -fstrict-volatile-bitfields
 CFLAGS += -Woverflow 
 
 BOOT_SECTIONS = --only-section .boot* --only-section .text* --only-section .rodata* 
@@ -15,7 +14,7 @@ exec: build
 build: mkdir
 	${TOOLCHAIN}-gcc ${CFLAGS} -c src/asm/start.S -o obj/start.o
 	${TOOLCHAIN}-gcc ${CFLAGS} -c src/asm/main.S -o obj/main.o
-	${TOOLCHAIN}-gcc ${CFLAGS} -c src/asm/func.c -o obj/func.o
+	${TOOLCHAIN}-gcc ${CFLAGS} -c src/c/func.c -o obj/func.o
 	${TOOLCHAIN}-gcc ${CFLAGS} -T script.ld obj/start.o obj/main.o obj/func.o -o elf/main.elf
 	${TOOLCHAIN}-objdump -D elf/main.elf > lst/main.lst
 	${TOOLCHAIN}-objcopy ${BOOT_SECTIONS} elf/main.elf elf/main.boot8.elf

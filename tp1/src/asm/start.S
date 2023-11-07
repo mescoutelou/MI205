@@ -1,4 +1,4 @@
-#include "cpu.h"
+#include "../cpu.h"
 
 .section .data
 .section .text
