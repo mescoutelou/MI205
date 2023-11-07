@@ -8,6 +8,9 @@ CFLAGS += -Woverflow
 BOOT_SECTIONS = --only-section .boot* --only-section .text* --only-section .rodata* 
 BOOT_OFFSET = 0x04000000
 
+setup:
+	../setup.sh
+
 exec: build
 	./cpu0_linux_x86-64 --boot hex/main.boot8.hex --vcd vcd/main.vcd --trigger 1000
 
