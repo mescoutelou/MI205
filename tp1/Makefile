@@ -8,9 +8,6 @@ CFLAGS += -Woverflow
 BOOT_SECTIONS = --only-section .boot* --only-section .text* --only-section .rodata* 
 BOOT_OFFSET = 0x04000000
 
-setup:
-	../setup.sh
-
 exec: build
 	./cpu0_linux_x86-64 --boot hex/main.boot8.hex --vcd vcd/main.vcd --trigger 1000
 
@@ -22,6 +19,9 @@ build: mkdir
 	${TOOLCHAIN}-objdump -D elf/main.elf > lst/main.lst
 	${TOOLCHAIN}-objcopy ${BOOT_SECTIONS} elf/main.elf elf/main.boot8.elf
 	python3 ../elf2hex.py --input elf/main.boot8.elf --output hex/main.boot8.hex --offset ${BOOT_OFFSET} --wide 16 --word 1
+
+view:
+	gtkwave vcd/main.vcd cpu0.gtkw &
 
 mkdir:
 	mkdir -p elf/
