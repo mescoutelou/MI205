@@ -3,7 +3,7 @@
  * Created Date: 2023-10-10 07:29:56 am
  * Author: Mathieu Escouteloup
  * -----
- * Last Modified: 2023-11-07 02:47:10 pm
+ * Last Modified: 2023-11-10 03:11:46 pm
  * Modified By: Mathieu Escouteloup
  * -----
  * License: See LICENSE.md
@@ -20,3 +20,8 @@ void func_reset_pin_c (uint32_t *p_gpio, uint8_t pin);
 uint16_t func_mul_c (uint8_t a, uint8_t b);
 uint16_t func_mulop_c (uint8_t a, uint8_t b);
 uint16_t func_mulp2_c (uint8_t a, uint8_t b);
+uint16_t func_mulinl_c (uint8_t a, uint8_t b);
+
+inline __attribute__ ((always_inline)) uint16_t func_mulinl_base_c (uint8_t a, uint8_t b) {
+  return a * b + 4;
+}

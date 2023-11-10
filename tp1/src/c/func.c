@@ -3,7 +3,7 @@
  * Created Date: 2023-10-09 08:59:17 pm
  * Author: Mathieu Escouteloup
  * -----
- * Last Modified: 2023-11-07 02:47:05 pm
+ * Last Modified: 2023-11-10 03:12:36 pm
  * Modified By: Mathieu Escouteloup
  * -----
  * License: See LICENSE.md
@@ -32,4 +32,8 @@ uint16_t func_mulop_c (uint8_t a, uint8_t b) {
 
 uint16_t func_mulp2_c (uint8_t a, uint8_t b) {
   return 0;
+}
+
+uint16_t func_mulinl_c (uint8_t a, uint8_t b) {
+  return func_mulinl_base_c (a, b);
 }
