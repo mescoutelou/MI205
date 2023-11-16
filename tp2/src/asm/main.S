@@ -3,7 +3,7 @@
  * Created Date: 2023-10-09 03:34:09 pm
  * Author: Mathieu Escouteloup
  * -----
- * Last Modified: 2023-11-10 03:13:37 pm
+ * Last Modified: 2023-11-16 07:07:54 pm
  * Modified By: Mathieu Escouteloup
  * -----
  * License: See LICENSE.md
@@ -28,15 +28,16 @@ main:
   sw ra, 0(sp)
 
   # main body
-  li t4, 0x87654321
-  li t5, 0x1
-  div t6, t4, t5    
-  add t3, t4, t5  
 
   # main end
   lw ra, 0(sp)
   addi sp, sp, 4
   ret
+
+## ------------------------------
+##     FUNCTION: func_loop
+## ------------------------------
+func_loop:
 
 ## ******************************
 ##             DATA
