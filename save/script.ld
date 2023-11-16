@@ -3,7 +3,7 @@
  * Created Date: 2023-03-31 02:52:02 pm
  * Author: Mathieu Escouteloup
  * -----
- * Last Modified: 2023-10-10 05:54:04 pm
+ * Last Modified: 2023-10-10 08:36:02 am
  * Modified By: Mathieu Escouteloup
  * -----
  * License: See LICENSE.md
@@ -21,22 +21,31 @@ MEMORY
 }
 
 STACK_SIZE  = 0x00003000;
-PC_BOOT     = 0x04000000;
+BOOT_PC     = 0x04000000;
 
 /* Section Definitions */
 SECTIONS
 {  
-  /* Code and constants */
-  .boot PC_BOOT :
+  /* Boot ROM */
+  .boot BOOT_PC :
   {
     KEEP(*start.o(.text*));
     *start.o(.rodata*);
     *start.o(.srodata*);
+    . = ALIGN(32);    /* PADDING END SECTION */
+  } > BOOT
+/*
+  /* Code and constants */
+  .text :
+  {
+    _stext = . ;
     *(.rodata*);
     *(.srodata*);
     *(.text*);
     . = ALIGN(32);    /* PADDING END SECTION */
-  } > BOOT
+    _etext = . ;
+    _idata = . ;
+  } > iROM
 
   /* Initialized data */
   .data : 
@@ -47,7 +56,7 @@ SECTIONS
     *(.sdata*);
     . = ALIGN(32);    /* PADDING END SECTION */
     _edata = . ;
-  } > iRAM AT > BOOT
+  } > iRAM AT > iROM
 
   /* Unitialized data */
   .bss (NOLOAD) :
