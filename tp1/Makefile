@@ -1,4 +1,5 @@
 TOOLCHAIN=riscv64-unknown-elf
+#TOOLCHAIN=riscv64-unknown-linux-gnu
 ISA_EXT=
 OPT_LVL=1
 CFLAGS = -march=rv32i${ISA_EXT} -mabi=ilp32

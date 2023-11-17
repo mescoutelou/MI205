@@ -1,23 +1,25 @@
 [*]
-[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
-[*] Thu Nov 16 12:08:43 2023
+[*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
+[*] Fri Nov 17 11:30:12 2023
 [*]
-[dumpfile] "/home/mescoutelou/Cours/MI205/tp2/vcd/cpu2-main.vcd"
-[dumpfile_mtime] "Thu Nov 16 10:44:08 2023"
-[dumpfile_size] 1318856
-[savefile] "/home/mescoutelou/Cours/MI205/tp2/cpu2.gtkw"
+[dumpfile] "/net/npers/mescoutelou/Cours/MI205/tp2/vcd/cpu2-main.vcd"
+[dumpfile_mtime] "Fri Nov 17 11:25:28 2023"
+[dumpfile_size] 1318320
+[savefile] "/net/npers/mescoutelou/Cours/MI205/tp2/cpu2.gtkw"
 [timestart] 0
 [size] 1850 1016
 [pos] -1 -1
-*-7.195366 258 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-7.195366 271 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TOP.EstiveSim.
 [treeopen] TOP.EstiveSim.m_estive.
 [treeopen] TOP.EstiveSim.m_estive.m_salers.
-[treeopen] TOP.EstiveSim.m_estive.m_salers.m_io.
 [treeopen] TOP.EstiveSim.m_estive.m_salers.m_io.m_mmap.
 [treeopen] TOP.EstiveSim.m_estive.m_salers.m_pipe.
 [treeopen] TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.
 [treeopen] TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.m_ex.
+[treeopen] TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.m_iss.
+[treeopen] TOP.EstiveSim.m_estive.m_salers.m_pipe.m_front.
+[treeopen] TOP.EstiveSim.m_estive.m_salers.m_pipe.m_front.m_if3.
 [sst_width] 509
 [signals_width] 344
 [sst_expanded] 1
@@ -182,9 +184,15 @@ TOP.reset
 @c00200
 -IF1
 @28
-+{valid} TOP.EstiveSim.m_estive.m_salers.m_pipe.m_front.m_if0.io_b_out_valid
++{i0_valid} TOP.EstiveSim.m_estive.m_salers.m_pipe.m_front.m_if3.m_buf.io_b_in_0_valid
 @22
-+{PC} TOP.EstiveSim.m_estive.m_salers.m_pipe.m_front.m_if0.io_b_out_ctrl_pc[31:0]
++{i0_PC   } TOP.EstiveSim.m_estive.m_salers.m_pipe.m_front.m_if3.m_buf.io_b_in_0_ctrl_pc[31:0]
++{i0_instr} TOP.EstiveSim.m_estive.m_salers.m_pipe.m_front.m_if3.m_buf.io_b_in_0_ctrl_instr[31:0]
+@28
++{i1_valid} TOP.EstiveSim.m_estive.m_salers.m_pipe.m_front.m_if3.m_buf.io_b_in_1_valid
+@22
++{i1_PC   } TOP.EstiveSim.m_estive.m_salers.m_pipe.m_front.m_if3.m_buf.io_b_in_1_ctrl_pc[31:0]
++{i1_instr} TOP.EstiveSim.m_estive.m_salers.m_pipe.m_front.m_if3.m_buf.io_b_in_1_ctrl_instr[31:0]
 @1401200
 -IF1
 @c00200
@@ -208,11 +216,17 @@ TOP.reset
 @22
 +{i0_PC   } TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.m_iss.io_b_in_0_ctrl_info_pc[31:0]
 +{i0_instr} TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.m_iss.io_b_in_0_ctrl_info_instr[31:0]
++{i0_s1   } TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.m_iss.m_out_0.io_b_in_data_s1[31:0]
++{i0_s2   } TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.m_iss.m_out_0.io_b_in_data_s2[31:0]
++{i0_s3   } TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.m_iss.m_out_0.io_b_in_data_s3[31:0]
 @28
 +{i1_valid} TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.m_iss.io_b_in_1_valid
 @22
 +{i1_PC   } TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.m_iss.io_b_in_1_ctrl_info_pc[31:0]
 +{i1_instr} TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.m_iss.io_b_in_1_ctrl_info_instr[31:0]
++{i1_s1   } TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.m_iss.m_out_1.io_b_in_data_s1[31:0]
++{i1_s2   } TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.m_iss.m_out_1.io_b_in_data_s2[31:0]
++{i1_s3   } TOP.EstiveSim.m_estive.m_salers.m_pipe.m_back.m_iss.m_out_1.io_b_in_data_s3[31:0]
 @1401200
 -ISS
 @c00200

@@ -1,23 +1,24 @@
 [*]
-[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
-[*] Thu Nov 16 12:06:06 2023
+[*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
+[*] Fri Nov 17 11:24:17 2023
 [*]
-[dumpfile] "/home/mescoutelou/Cours/MI205/tp2/vcd/cpu1-main.vcd"
-[dumpfile_mtime] "Thu Nov 16 10:44:06 2023"
-[dumpfile_size] 1031111
-[savefile] "/home/mescoutelou/Cours/MI205/tp2/cpu1.gtkw"
+[dumpfile] "/net/npers/mescoutelou/Cours/MI205/tp2/vcd/cpu1-main.vcd"
+[dumpfile_mtime] "Fri Nov 17 11:20:46 2023"
+[dumpfile_size] 1030401
+[savefile] "/net/npers/mescoutelou/Cours/MI205/tp2/cpu1.gtkw"
 [timestart] 0
 [size] 1850 1016
 [pos] -1 -1
-*-7.195366 364 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-7.195366 60 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TOP.EstiveSim.
 [treeopen] TOP.EstiveSim.m_estive.
 [treeopen] TOP.EstiveSim.m_estive.m_aubrac.
-[treeopen] TOP.EstiveSim.m_estive.m_aubrac.m_io.
 [treeopen] TOP.EstiveSim.m_estive.m_aubrac.m_io.m_mmap.
 [treeopen] TOP.EstiveSim.m_estive.m_aubrac.m_pipe.
 [treeopen] TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.
 [treeopen] TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.m_ex.
+[treeopen] TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_front.
+[treeopen] TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_front.m_if2.
 [sst_width] 509
 [signals_width] 270
 [sst_expanded] 1
@@ -185,8 +186,18 @@ TOP.reset
 +{valid} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_front.m_if0.io_b_out_valid
 @22
 +{PC} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_front.m_if0.io_b_out_ctrl_pc[31:0]
++{instr} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_front.m_if2.m_out.io_b_in_ctrl_pack[31:0]
 @1401200
 -IF1
+@c00200
+-IF2
+@28
++{valid} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_front.m_if3.io_b_in_valid
+@22
++{PC} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_front.m_if3.io_b_in_ctrl_pc[31:0]
++{instr} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_front.m_if3.io_b_in_ctrl_pack[31:0]
+@1401200
+-IF2
 @c00200
 -ID
 @28
@@ -229,7 +240,7 @@ TOP.reset
 +{instr} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.m_ex.m_ex1.io_b_out_ctrl_info_instr[31:0]
 +{s1} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.m_ex.m_ex1.io_b_out_data_s1[31:0]
 +{s3} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.m_ex.m_ex1.io_b_out_data_s2[31:0]
-+{res} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.m_ex.m_ex1.io_b_out_data_s3[31:0]
++{res} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.m_ex.m_out.io_b_in_data_res[31:0]
 @1401200
 -EX2
 @c00200
