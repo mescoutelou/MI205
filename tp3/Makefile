@@ -1,4 +1,4 @@
-TOOLCHAIN=riscv64-unknown-elf
+TOOLCHAIN=riscv32-unknown-elf
 HOST=linux_x86-64
 CPU_NUM=3
 ISA_EXT=m
