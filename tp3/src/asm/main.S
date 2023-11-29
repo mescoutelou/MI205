@@ -28,6 +28,7 @@ main:
   sw ra, 0(sp)
 
   # main body
+  call func
 
   # main end
   lw ra, 0(sp)

@@ -1,11 +1,11 @@
 [*]
-[*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
-[*] Fri Nov 17 11:25:18 2023
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Wed Nov 29 10:48:02 2023
 [*]
-[dumpfile] "/net/npers/mescoutelou/Cours/MI205/tp2/vcd/cpu0-main.vcd"
-[dumpfile_mtime] "Fri Nov 17 11:24:31 2023"
+[dumpfile] "/home/mescoutelou/Cours/MI205/tp2/vcd/cpu0-main.vcd"
+[dumpfile_mtime] "Wed Nov 29 10:47:10 2023"
 [dumpfile_size] 962255
-[savefile] "/net/npers/mescoutelou/Cours/MI205/tp2/cpu0.gtkw"
+[savefile] "/home/mescoutelou/Cours/MI205/tp2/cpu0.gtkw"
 [timestart] 0
 [size] 1850 1016
 [pos] -1 -1
@@ -15,6 +15,7 @@
 [treeopen] TOP.EstiveSim.m_estive.m_aubrac.
 [treeopen] TOP.EstiveSim.m_estive.m_aubrac.m_io.m_mmap.
 [treeopen] TOP.EstiveSim.m_estive.m_aubrac.m_pipe.
+[treeopen] TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.
 [treeopen] TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.m_ex.
 [treeopen] TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.m_id.
 [treeopen] TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.m_wb.
@@ -171,9 +172,8 @@ TOP.reset
 +{SCRATCH7} TOP.EstiveSim.m_estive.m_aubrac.m_io.m_mmap.r_scratch_7[31:0]
 @1401200
 -Memory
-@c00201
--Pipeline
 @c00200
+-Pipeline
 -IF0
 @28
 +{valid} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_front.m_pc.io_b_out_valid
@@ -197,6 +197,9 @@ TOP.reset
 @22
 +{PC} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_front.io_b_out_0_ctrl_pc[31:0]
 +{instr} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_front.io_b_out_0_ctrl_instr[31:0]
++{s1} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.m_id.m_out.io_b_in_data_s1[31:0]
++{s2} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.m_id.m_out.io_b_in_data_s2[31:0]
++{s3} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.m_id.m_out.io_b_in_data_s3[31:0]
 @1401200
 -ID
 @c00200
@@ -236,7 +239,6 @@ TOP.reset
 +{s3} TOP.EstiveSim.m_estive.m_aubrac.m_pipe.m_back.m_mem.io_b_out_data_s3[31:0]
 @1401200
 -WB
-@1401201
 -Pipeline
 [pattern_trace] 1
 [pattern_trace] 0
