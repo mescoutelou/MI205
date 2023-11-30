@@ -154,31 +154,82 @@ TOP.reset
 -I/Os
 @c00200
 -Memory
+@22
++{SCRATCH0} TOP.Estive.m_aubrac.m_io.m_mmap.r_scratch_0[31:0]
++{SCRATCH1} TOP.Estive.m_aubrac.m_io.m_mmap.r_scratch_1[31:0]
++{SCRATCH2} TOP.Estive.m_aubrac.m_io.m_mmap.r_scratch_2[31:0]
++{SCRATCH3} TOP.Estive.m_aubrac.m_io.m_mmap.r_scratch_3[31:0]
++{SCRATCH4} TOP.Estive.m_aubrac.m_io.m_mmap.r_scratch_4[31:0]
++{SCRATCH5} TOP.Estive.m_aubrac.m_io.m_mmap.r_scratch_5[31:0]
++{SCRATCH6} TOP.Estive.m_aubrac.m_io.m_mmap.r_scratch_6[31:0]
++{SCRATCH7} TOP.Estive.m_aubrac.m_io.m_mmap.r_scratch_7[31:0]
 @1401200
 -Memory
 @c00200
 -Pipeline
 -IF0
+@28
++{valid} TOP.Estive.m_aubrac.m_pipe.m_front.m_pc.io_b_out_valid
+@22
++{PC} TOP.Estive.m_aubrac.m_pipe.m_front.m_pc.io_b_out_ctrl_pc[31:0]
 @1401200
 -IF0
 @c00200
 -IF1
+@28
++{valid} TOP.Estive.m_aubrac.m_pipe.m_front.m_if0.io_b_out_valid
+@22
++{PC} TOP.Estive.m_aubrac.m_pipe.m_front.m_if0.io_b_out_ctrl_pc[31:0]
++{instr} TOP.Estive.m_aubrac.m_pipe.m_front.m_if3.m_buf.io_b_in_0_ctrl_instr[31:0]
 @1401200
 -IF1
 @c00200
 -ID
+@28
++{valid} TOP.Estive.m_aubrac.m_pipe.m_front.io_b_out_0_valid
+@22
++{PC} TOP.Estive.m_aubrac.m_pipe.m_front.io_b_out_0_ctrl_pc[31:0]
++{instr} TOP.Estive.m_aubrac.m_pipe.m_front.io_b_out_0_ctrl_instr[31:0]
++{s1} TOP.Estive.m_aubrac.m_pipe.m_back.m_id.m_out.io_b_in_data_s1[31:0]
++{s2} TOP.Estive.m_aubrac.m_pipe.m_back.m_id.m_out.io_b_in_data_s2[31:0]
++{s3} TOP.Estive.m_aubrac.m_pipe.m_back.m_id.m_out.io_b_in_data_s3[31:0]
 @1401200
 -ID
 @c00200
 -EX
+@28
++{valid} TOP.Estive.m_aubrac.m_pipe.m_back.m_id.io_b_out_valid
+@22
++{PC} TOP.Estive.m_aubrac.m_pipe.m_back.m_id.io_b_out_ctrl_info_pc[31:0]
++{instr} TOP.Estive.m_aubrac.m_pipe.m_back.m_id.io_b_out_ctrl_info_instr[31:0]
++{s1} TOP.Estive.m_aubrac.m_pipe.m_back.m_id.io_b_out_data_s1[31:0]
++{s2} TOP.Estive.m_aubrac.m_pipe.m_back.m_id.io_b_out_data_s2[31:0]
++{s3} TOP.Estive.m_aubrac.m_pipe.m_back.m_id.io_b_out_data_s3[31:0]
++{res} TOP.Estive.m_aubrac.m_pipe.m_back.m_ex.m_out.io_b_in_data_res[31:0]
 @1401200
 -EX
 @c00200
 -MEM
+@28
++{valid} TOP.Estive.m_aubrac.m_pipe.m_back.m_ex.io_b_out_valid
+@22
++{PC} TOP.Estive.m_aubrac.m_pipe.m_back.m_ex.io_b_out_ctrl_info_pc[31:0]
++{instr} TOP.Estive.m_aubrac.m_pipe.m_back.m_ex.io_b_out_ctrl_info_instr[31:0]
++{res} TOP.Estive.m_aubrac.m_pipe.m_back.m_ex.io_b_out_data_res[31:0]
++{s1} TOP.Estive.m_aubrac.m_pipe.m_back.m_ex.io_b_out_data_s1[31:0]
++{s3} TOP.Estive.m_aubrac.m_pipe.m_back.m_ex.io_b_out_data_s3[31:0]
 @1401200
 -MEM
 @c00200
 -WB
+@28
++{valid} TOP.Estive.m_aubrac.m_pipe.m_back.m_mem.io_b_out_valid
+@22
++{PC} TOP.Estive.m_aubrac.m_pipe.m_back.m_mem.io_b_out_ctrl_info_pc[31:0]
++{instr} TOP.Estive.m_aubrac.m_pipe.m_back.m_mem.io_b_out_ctrl_info_instr[31:0]
++{res} TOP.Estive.m_aubrac.m_pipe.m_back.m_wb.w_res[31:0]
++{s1} TOP.Estive.m_aubrac.m_pipe.m_back.m_mem.io_b_out_data_s1[31:0]
++{s3} TOP.Estive.m_aubrac.m_pipe.m_back.m_mem.io_b_out_data_s3[31:0]
 @1401200
 -WB
 -Pipeline
